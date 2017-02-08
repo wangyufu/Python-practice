@@ -1,60 +1,60 @@
 sql
 ==
 ---
-##ÇÐ»»µ½staff_tableËùÔÚÄ¿Â¼£»    
-##¿ÉÒÔ¶ÔÎÄ¼þ½øÐÐselect¡¢delete¡¢update¡¢insert²Ù×÷£»
+## åˆ‡æ¢åˆ°staff_tableæ‰€åœ¨ç›®å½•ï¼›    
+## å¯ä»¥å¯¹æ–‡ä»¶è¿›è¡Œselectã€deleteã€updateã€insertæ“ä½œï¼›
 ---
 
-1¡¢select
+1ã€select
 =
-**SELECT ÁÐÃû³Æ FROM ±íÃû³Æ WHERE ÁÐ ÔËËã·û Öµ**        
-**WHERE×Ó¾äÊÇ¿ÉÑ¡Ïî**    
+**SELECT åˆ—åç§° FROM è¡¨åç§° WHERE åˆ— è¿ç®—ç¬¦ å€¼**        
+**WHEREå­å¥æ˜¯å¯é€‰é¡¹**    
 
-ÀýÈç£º
+ä¾‹å¦‚ï¼š
 python sql.py select * from staff_table   
 python sql.py select * from staff_table where age ">" 22   
 python sql.py select name,age from staff_table where age ">" 22   
 
-*Èç¹ûÃüÁî×Ö¶ÎÊäÈë²»ÕýÈ·½«ÌáÊ¾£¬ÇëÊäÈëÕýÈ·×Ö¶Î*    
-*Èç¹ûÃüÁî×Ö¶ÎÊäÈëÕýÈ·½«´òÓ¡·ûºÏ²éÑ¯Ìõ¼þµÄÊäÈë²¢¹²¼¸ÐÐ*    
-*ÁÐÃûÎªstaff_id, name, age, phone, dept, enroll_date*    
-*±íÃû³ÆÎª¹Ì¶¨staff_table*    
-*ÔËËã·ûÎª">"|"="|"<"|"like"*    
-*ÒòÎª¡°>¡±¡°<¡±¡°=¡±ÔÚWindowsÖÐÒÑ±»¶¨Òå£¬ËùÒÔ²»ÄÜÖ±½ÓÊ¹ÓÃÐèÒª¼ÓÒýºÅ*    
+*å¦‚æžœå‘½ä»¤å­—æ®µè¾“å…¥ä¸æ­£ç¡®å°†æç¤ºï¼Œè¯·è¾“å…¥æ­£ç¡®å­—æ®µ*    
+*å¦‚æžœå‘½ä»¤å­—æ®µè¾“å…¥æ­£ç¡®å°†æ‰“å°ç¬¦åˆæŸ¥è¯¢æ¡ä»¶çš„è¾“å…¥å¹¶å…±å‡ è¡Œ*    
+*åˆ—åä¸ºstaff_id, name, age, phone, dept, enroll_date*    
+*è¡¨åç§°ä¸ºå›ºå®šstaff_table*    
+*è¿ç®—ç¬¦ä¸º">"|"="|"<"|"like"*    
+*å› ä¸ºâ€œ>â€â€œ<â€â€œ=â€åœ¨Windowsä¸­å·²è¢«å®šä¹‰ï¼Œæ‰€ä»¥ä¸èƒ½ç›´æŽ¥ä½¿ç”¨éœ€è¦åŠ å¼•å·*    
 
 ---
-2¡¢update
+2ã€update
 =
-**UPDATE ±íÃû³Æ SET ÁÐ = Öµ  WHERE ÁÐ ÔËËã·û Öµ**    
-**WHERE×Ó¾äÊÇ¿ÉÑ¡Ïî**
+**UPDATE è¡¨åç§° SET åˆ— = å€¼  WHERE åˆ— è¿ç®—ç¬¦ å€¼**    
+**WHEREå­å¥æ˜¯å¯é€‰é¡¹**
 
-ÀýÈç£º
+ä¾‹å¦‚ï¼š
 python sql.py update staff_table set dept "=" DT    
 python sql.py update staff_table set dept "=" DT where age ">" 22    
 
-*Èç¹ûÃüÁî×Ö¶ÎÊäÈë²»ÕýÈ·½«ÌáÊ¾£¬ÇëÊäÈëÕýÈ·×Ö¶Î*    
-*Èç¹ûÃüÁî×Ö¶ÎÊäÈëÕýÈ·½«ÐÞ¸ÄÁÐÖµ£¬ÐÞ¸Ä³É¹¦ºó´òÓ¡ÌáÊ¾£¬Ã»ÐÞ¸ÄÌáÊ¾´òÓ¡Ã»ÓÐÆ¥ÅäµÄÊý¾Ý*     
+*å¦‚æžœå‘½ä»¤å­—æ®µè¾“å…¥ä¸æ­£ç¡®å°†æç¤ºï¼Œè¯·è¾“å…¥æ­£ç¡®å­—æ®µ*    
+*å¦‚æžœå‘½ä»¤å­—æ®µè¾“å…¥æ­£ç¡®å°†ä¿®æ”¹åˆ—å€¼ï¼Œä¿®æ”¹æˆåŠŸåŽæ‰“å°æç¤ºï¼Œæ²¡ä¿®æ”¹æç¤ºæ‰“å°æ²¡æœ‰åŒ¹é…çš„æ•°æ®*     
 
 ---
-3¡¢delete
+3ã€delete
 =
-**DELETE FROM ±íÃû³Æ WHERE ÁÐ = Öµ**    
-**WHERE×Ó¾äÊÇ±ØÑ¡Ïî£¬ÁÐ¹Ì¶¨Îªstaff_id**    
+**DELETE FROM è¡¨åç§° WHERE åˆ— = å€¼**    
+**WHEREå­å¥æ˜¯å¿…é€‰é¡¹ï¼Œåˆ—å›ºå®šä¸ºstaff_id**    
 
-ÀýÈç£º
+ä¾‹å¦‚ï¼š
 python sql.py delete from staff_table where staff_id "=" 4    
 
-*Èç¹ûÃüÁî×Ö¶ÎÊäÈë²»ÕýÈ·½«ÌáÊ¾£¬ÇëÊäÈëÕýÈ·×Ö¶Î*    
-*Èç¹ûÃüÁî×Ö¶ÎÊäÈëÕýÈ·½«É¾³ýÕâÐÐÊý¾Ý£¬É¾³ý³É¹¦ºó´òÓ¡ÌáÊ¾£¬Ã»É¾³ý³É¹¦ÌáÊ¾´òÓ¡Ã»ÓÐ´ËÌõÊý¾Ý*    
+*å¦‚æžœå‘½ä»¤å­—æ®µè¾“å…¥ä¸æ­£ç¡®å°†æç¤ºï¼Œè¯·è¾“å…¥æ­£ç¡®å­—æ®µ*    
+*å¦‚æžœå‘½ä»¤å­—æ®µè¾“å…¥æ­£ç¡®å°†åˆ é™¤è¿™è¡Œæ•°æ®ï¼Œåˆ é™¤æˆåŠŸåŽæ‰“å°æç¤ºï¼Œæ²¡åˆ é™¤æˆåŠŸæç¤ºæ‰“å°æ²¡æœ‰æ­¤æ¡æ•°æ®*    
 
 ---
-4¡¢insert
+4ã€insert
 =
-**INSERT INTO ±íÃû³Æ VALUES Öµ1£¬Öµ2...**       
+**INSERT INTO è¡¨åç§° VALUES å€¼1ï¼Œå€¼2...**       
 
-ÀýÈç£º    
+ä¾‹å¦‚ï¼š    
 python sql2.py insert into staff_table values name,age,phone,dept,enroll_date    
    
-*staff_idÎÞÐè¼üÈë£¬staff_id×ÔÔö*   
-*Èç¹ûÃüÁî×Ö¶ÎÊäÈë²»ÕýÈ·½«ÌáÊ¾£¬ÇëÊäÈëÕýÈ·×Ö¶Î*    
-*Èç¹ûÃüÁî×Ö¶ÎÊäÈëÕýÈ·½«²åÈëÕâÐÐÊý¾Ý£¬²åÈë³É¹¦ºó´òÓ¡ÌáÊ¾£¬phone²»Î¨Ò»Ê±ÌáÊ¾phoneÖØ¸´*   
+*staff_idæ— éœ€é”®å…¥ï¼Œstaff_idè‡ªå¢ž*   
+*å¦‚æžœå‘½ä»¤å­—æ®µè¾“å…¥ä¸æ­£ç¡®å°†æç¤ºï¼Œè¯·è¾“å…¥æ­£ç¡®å­—æ®µ*    
+*å¦‚æžœå‘½ä»¤å­—æ®µè¾“å…¥æ­£ç¡®å°†æ’å…¥è¿™è¡Œæ•°æ®ï¼Œæ’å…¥æˆåŠŸåŽæ‰“å°æç¤ºï¼Œphoneä¸å”¯ä¸€æ—¶æç¤ºphoneé‡å¤*   
