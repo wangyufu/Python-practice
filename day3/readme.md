@@ -2,7 +2,7 @@ sql
 ==
 ---
 ##切换到staff_table所在目录；    
-可以对文件进行select、delete、update、insert操作；##
+##可以对文件进行select、delete、update、insert操作；
 ---
 
 1、select
