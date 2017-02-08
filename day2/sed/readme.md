@@ -3,12 +3,12 @@ sed
 
 ---
 
-*����python sed.py [-i  source_str,dest_str] [input-file]*  
-*������Ϣpython sed.py -h*  
+*运行python sed.py [-i  source_str,dest_str] [input-file]*  
+*帮助信息python sed.py -h*  
 
-���й��̣�
-=
-��ȡ�ļ�����ÿһ�У��ж������Ƿ�������ַ����������滻��д�����ļ���û�о�ֱ��д�����ļ��� 
-��ɵ�����ɾ��ԭ�ļ������������ļ�Ϊԭ�ļ���  
+## 运行过程：
 
-**ע�Ȿ�������е�Դ�ַ����滻��Ŀ���ַ������ַ��������пո�**
+读取文件迭代每一行，判断这行是否有这个字符串，有则替换并写入新文件，没有就直接写入新文件； 
+完成迭代后删除原文件，重命名新文件为原文件。  
+
+**注意本程序所有的源字符串替换成目标字符串，字符串不能有空格**
